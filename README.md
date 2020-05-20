@@ -31,7 +31,7 @@ layers:
 .......
   ```
 
-Exlpore your new lambda backed http services
+Use the endpoints to exlpore your new lambda backed http services
 
 
 ## Run on local machine
@@ -56,15 +56,15 @@ sls invoke local --function invokeLambda
 This will invoke the lambda locally
 
 ## Explore
- - [lib/routes/example.js](lib/routes/exmaple) - the medial handlers are defined here
- - [lambdas.js](lambdas.js) - wraps the medial handlers to return AWS lambda functions
+ - [lib/routes/example.js](tree/master/lib/routes/exmaple) - the medial handlers are defined here
+ - [lambdas.js](tree/master/lambdas.js) - wraps the medial handlers to return AWS lambda functions
  - [serverless.yml](serverless.yml) - Serverless configuration
 
 Invoking a lambda from another lambda
- - [lambda-invoke.js](lambda-invoke.js) - A lambda function that invokes another lambda function
+ - [lambda-invoke.js](tree/master/lambda-invoke.js) - A lambda function that invokes another lambda function
 
 Hapi configuration so that you can run on your local machine
-  - [lib/routes/index.js](lib/routes/index.js) - Hapi routes configuration
-  - [lib/server](lib/server) - Hapi server configuration
+  - [lib/routes/index.js](tree/master/lib/routes/index.js) - Hapi routes configuration
+  - [lib/server](tree/master/lib/server) - Hapi server configuration
 
 
