@@ -1,0 +1,34 @@
+service: medial-example
+
+frameworkVersion: ">=1.1.0"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  get:
+    handler: lambdas.getExample
+    events:
+      - http: 
+          path: example
+          method: get
+  post:
+    handler: lambdas.postExample
+    events:
+      - http: 
+          path: example
+          method: post
+
+  invokeLambda:
+    handler: lambdas.invoke
+
+package:
+  exclude:
+    - .dynamodb/**
+    - '**/__mocks__/**'
+    - test/**
+    - coverage/**
+    - jest.config.js
+    - lib/server/**
+    - lib/routes/index.js

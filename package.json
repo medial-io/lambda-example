@@ -1,0 +1,31 @@
+{
+  "name": "medial-lambda-example",
+  "version": "0.0.1",
+  "description": "Example using medial lambda",
+  "main": "index.js",
+  "repository": "git://github.com/medial-io/lambda-example",
+  "scripts": {
+    "start": "node index.js",
+    "sls": "sls"
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/joi": "^17.1.1",
+    "@medial/lambda": "0.0.1"
+  },
+  "devDependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/vision": "^6.0.0",
+    "hapi-swagger": "^13.0.1",
+    "serverless": "^1.71.3"
+  },
+  "keywords": [
+    "aws",
+    "medial",
+    "lambda",
+    "example"
+  ],
+  "author": "Amit Kirdatt",
+  "license": "MIT"
+}
