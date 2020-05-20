@@ -13,7 +13,7 @@ npm ci
 sls deploy --region us-east-1     //or whichever region you'd like
 ```
 
-One deployment is complete, you'll see a message like this on your terminal:
+Once deployment is complete, you'll see a message like this on your terminal:
 
 ```
 .....
