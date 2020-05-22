@@ -11,7 +11,7 @@
   "dependencies": {
     "@hapi/boom": "^9.1.0",
     "@hapi/joi": "^17.1.1",
-    "@medial/lambda": "0.0.2"
+    "@medial/lambda": "0.0.3"
   },
   "devDependencies": {
     "@hapi/hapi": "^19.1.1",

@@ -33,6 +33,10 @@ layers:
 
 Use the endpoints to exlpore your new lambda backed http services
 
+- The GET endpoint also sets header called `my-header` with a value of `value1` and also sets two cookies:
+  - `cookieKey` with value `cookieValue`
+  - `cookieKey1` with value `cookieValue` (HttpOnly cookie)
+
 
 ## Run on local machine
 ```npm start```
