@@ -33,7 +33,7 @@ layers:
 
 Use the endpoints to exlpore your new lambda backed http services
 
-### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example
+### **GET** https://{server}.execute-api.{region}.amazonaws.com/dev/example
 - The GET endpoint sets a header called `my-header` with a value of `value1` and also sets two cookies:
   - `cookieKey` with value `cookieValue`
   - `cookieKey1` with value `cookieValue` (HttpOnly cookie)
@@ -43,7 +43,7 @@ Use the endpoints to exlpore your new lambda backed http services
 {"hello": "world"}
 ```
 
-### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example?error=true
+### **GET** https://{server}.execute-api.{region}.amazonaws.com/dev/example?error=true
 This will force a 404 error 
 
 *Returns*
@@ -55,7 +55,7 @@ This will force a 404 error
 }
 ```
 
-### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example?a=1
+### **GET** https://{server}.execute-api.{region}.amazonaws.com/dev/example?a=1
 
 *Returns*
 ```
@@ -67,7 +67,7 @@ This will force a 404 error
 }
 ```
 
-### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example?a=1&a=2
+### **GET** https://{server}.execute-api.{region}.amazonaws.com/dev/example?a=1&a=2
 
 *Returns* 
 ```
@@ -80,7 +80,7 @@ This will force a 404 error
 }
 ```
 
-### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example?b=1
+### **GET** https://{server}.execute-api.{region}.amazonaws.com/dev/example?b=1
 
 This will throw a 400 error
 
@@ -99,7 +99,7 @@ This will throw a 400 error
 }
 ```
 
-### **POST** https://<server>.execute-api.<region>.amazonaws.com/dev/example
+### **POST** https://{server}.execute-api.{region}.amazonaws.com/dev/example
 
 The payload takes two attributes:
  - a - **required** - A number
