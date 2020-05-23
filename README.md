@@ -33,10 +33,97 @@ layers:
 
 Use the endpoints to exlpore your new lambda backed http services
 
-- The GET endpoint also sets header called `my-header` with a value of `value1` and also sets two cookies:
+### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example
+- The GET endpoint sets a header called `my-header` with a value of `value1` and also sets two cookies:
   - `cookieKey` with value `cookieValue`
   - `cookieKey1` with value `cookieValue` (HttpOnly cookie)
 
+*Returns*
+```
+{"hello": "world"}
+```
+
+### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example?error=true
+This will force a 404 error 
+
+*Returns*
+ ```
+ {
+    "statusCode": 404,
+    "error": "Not Found",
+    "message": "boo boo"
+}
+```
+
+### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example?a=1
+
+*Returns*
+```
+ {
+    "hello": "world",
+    "a": [
+        "1"
+    ]
+}
+```
+
+### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example?a=1&a=2
+
+*Returns* 
+```
+{
+    "hello": "world",
+    "a": [
+        "1",
+        "2"
+    ]
+}
+```
+
+### **GET** https://<server>.execute-api.<region>.amazonaws.com/dev/example?b=1
+
+This will throw a 400 error
+
+*Returns* 
+```
+{
+    "statusCode": 400,
+    "error": "Bad Request",
+    "message": "\"b\" is not allowed",
+    "validation": {
+        "source": "query",
+        "keys": [
+            "b"
+        ]
+    }
+}
+```
+
+### **POST** https://<server>.execute-api.<region>.amazonaws.com/dev/example
+
+The payload takes two attributes:
+ - a - **required** - A number
+ - c - **optional** - Anything
+
+ For example: This payload:
+ ```
+ {
+  "a": "1",
+  "c": {
+    "d": "hello"
+  }
+}
+ ```
+
+*Returns* 
+```
+{
+  "a": "1",
+  "c": {
+    "d": "hello"
+  }
+}
+```
 
 ## Run on local machine
 ```npm start```
